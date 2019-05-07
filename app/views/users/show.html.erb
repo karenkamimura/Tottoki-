@@ -1,0 +1,9 @@
+マイページです
+
+<%= attachment_image_tag @user, :profile_image, :fill, 60, 60, class: "user_image", format: 'jpeg', fallback: "no_image.png" %>
+
+<%= @user.username %>
+
+<%= link_to "編集", edit_user_path(current_user.id), class: "edit_user_#{current_user.id}" %>
+
+<%= link_to "退会", user_path, :user => {:deleted => 'true'}, method: :delete, class: "btn-sm btn-danger", "data-confirm" => "本当に退会しますか？" %>
