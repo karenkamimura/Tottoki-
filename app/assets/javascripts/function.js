@@ -1,12 +1,12 @@
-jQuery(function($){
-    jQuery('#vegas').vegas({
+$(function(){
+    $('#vegas').vegas({
         slides: [
             { src: '/images/spain.jpg' },
             { src: '/images/lipstick.jpg' },
             { src: '/images/flower.jpg' },
             { src: '/images/girl.jpg' }
         ],
-        overlay: './js/overlays/02.png', //フォルダ『overlays』の中からオーバーレイのパターン画像を選択
+        overlay: './images/overlays/03.png', //フォルダ『overlays』の中からオーバーレイのパターン画像を選択
         transition: 'fade', //スライドを遷移させる際のアニメーション
         transitionDuration: 4000, //スライドの遷移アニメーションの時間
         delay: 10000, //スライド切り替え時の遅延時間

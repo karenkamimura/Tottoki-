@@ -1,6 +1,5 @@
 class Entry < ApplicationRecord
   belongs_to :blog
-  belongs_to :user
   has_many :favorites, dependent: :destroy
 
   def favorite_user(user_id)

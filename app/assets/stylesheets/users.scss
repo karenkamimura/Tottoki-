@@ -1,3 +1,95 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.col-xs-3 {
+    width: 25%;
+}
+
+.col-xs-9 {
+    width: 75%;
+}
+.circle img {
+  border-radius: 30px;
+}
+img.profile-img{
+  float: right;
+  margin-top: 30px;
+  width: 100px;
+  height: 100px;
+}
+.pull-left {
+  float: none;
+  left: -100%;
+  margin-left: 10px;
+}
+
+.simple_square_btn3 {
+	display: block;
+	position: relative;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #1B1B1B;
+	background: #fff;
+    border-radius: 30px;
+	border:1px solid #1B1B1B;
+}
+.simple_square_btn3:hover {
+	 cursor: pointer;
+	 text-decoration: none;
+	 -webkit-animation: simple_square_btn3 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+     -moz-animation: simple_square_btn3 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	 animation: simple_square_btn3 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes simple_square_btn3 {
+  0% {
+    -webkit-transform: scale(0.85);
+    transform: scale(0.85);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-moz-keyframes simple_square_btn3 {
+  0% {
+    -webkit-transform: scale(0.85);
+    transform: scale(0.85);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes simple_square_btn3 {
+  0% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.fuwauki_btn_red{
+  display: inline-block;
+  background-color: #FFF;
+  color: #D5F1D6;
+  width: 160px;
+  padding: 0.8em;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  -webkit-tap-highlight-color: transparent;
+  transition: .2s ease-out;
+  text-align: center;
+}
+.fuwauki_btn_red:hover{
+   cursor: pointer;
+   text-decoration: none;
+   transform: translateY(-4px);
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 3px 10px 0 rgba(0,0,0,0.12), 0 4px 7px -2px rgba(0,0,0,0.2);
+}
+

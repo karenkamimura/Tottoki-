@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!,except: [:about, :top]
+  
   def top
   end
 
@@ -12,6 +14,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @favorite_entries = Favorite.where(user: @user).map(&:entry)
+    @favorite = Favorite.find_by(user_id: current_user.id, entry_id: params[:entry_id])
   end
 
   def edit

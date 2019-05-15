@@ -1,9 +1,44 @@
-マイページです
+<main>
+	<div class="col-xs-3">
+		<h5>マイページ</h5>
+			<%= attachment_image_tag @user, :profile_image, :fill, 60, 60, class: "img-circle pull-left profile-img", format: 'jpeg', fallback: "no_image.png" %>
+				<table class="table">
+        			<tbody>
+          				<tr>
+							<th><%= @user.username %></th>
+						</tr>
+						<tr>
+							<th><%= link_to "編集", edit_user_path(current_user.id), class: "simple_square_btn3" %></th>
+						</tr>
+						<tr>
+							<th><%= link_to "退会", user_path, :user => {:deleted => 'true'}, method: :delete, class: "simple_square_btn3", "data-confirm" => "本当に退会しますか？" %></th>
+						</tr>
+					</tbody>
+				</table>
+	</div>
 
-<%= attachment_image_tag @user, :profile_image, :fill, 60, 60, class: "user_image", format: 'jpeg', fallback: "no_image.png" %>
-
-<%= @user.username %>
-
-<%= link_to "編集", edit_user_path(current_user.id), class: "btn btn-success" %>
-
-<%= link_to "退会", user_path, :user => {:deleted => 'true'}, method: :delete, class: "btn-sm btn-danger", "data-confirm" => "本当に退会しますか？" %>
+	<div class="col-xs-9">
+				<table class="table fav">
+					<thead>
+						<tr>
+  						<th><h4>お気に入り</h4></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><% @favorite_entries.each do |fav| %></td>
+							<td><div class="panel panel-default">
+    								<div class="panel-body">
+      									<%= link_to fav.title %> - <i> published <%= time_ago_in_words(fav.published) %> ago.</i>
+    											<div id="likes_buttons_<%= fav.id %>">
+    												<%= render partial: 'favorites/favorite', locals: { blog_entry: fav, favorites: fav.favorites} %>
+    											</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					<% end %>
+					</tbody>
+				</table>
+	</div>
+</main>
