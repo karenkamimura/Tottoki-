@@ -18,6 +18,7 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-every :hours do
-  rake 'my:rake:task'
+job_type :rake, 'cd :path bundle exec rake :task'
+every :hour do
+  rake 'sync:blogs'
 end

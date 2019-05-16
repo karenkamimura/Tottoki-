@@ -1,8 +1,9 @@
 class EntriesController < ApplicationController
+
   def index
-    @entries = Entry.all
-    # @entries = @blog.entries.order('published desc')
+    @entries = Entry.page(params[:page]).reverse_order
   end
+    # @entries = @blog.entries.order('published desc')
 
   def show
     @entry = Entry.find(params[:id])

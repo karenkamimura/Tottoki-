@@ -1,14 +1,15 @@
 <main>
-<div class="container">
-  <% @entries.each do |entry| %>
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <%= link_to entry.title, entry %> - <i> published <%= time_ago_in_words(entry.published) %> ago.</i>
-        <div id="likes_buttons_<%= entry.id %>">
-		<%= render partial: 'favorites/favorite', locals: { blog_entry: entry, favorites: entry.favorites} %>
-		</div>
+  <div class="container">
+    <% @entries.each do |entry| %>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <%= link_to entry.title, entry %> - <i> published <%= time_ago_in_words(entry.published) %> ago.</i>
+          <div id="likes_buttons_<%= entry.id %>">
+    	    <%= render partial: 'favorites/favorite', locals: { blog_entry: entry, favorites: entry.favorites} %>
+    	    </div>
+        </div>
       </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+  <%= paginate @entries, class:"hogehoge" %>
 </main>
