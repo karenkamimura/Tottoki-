@@ -1,6 +1,8 @@
 class FavoritesController < ApplicationController
   before_action :set_entry
   def create
+    favorite = current_user.favorites.build(entry_id: entry.id)
+    favorite.save
     @favorite = Favorite.create(user_id: current_user.id, entry_id: params[:entry_id])
     @favorites = Favorite.where(entry_id: params[:entry_id])
     @entry.reload
