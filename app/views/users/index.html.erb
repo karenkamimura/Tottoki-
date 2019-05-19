@@ -1,5 +1,5 @@
-<h2>ユーザー一覧</h2>
-    <table>
+<h1 class="title-moji">All User</h1>
+    <table class="table table-hover table-inverse">
         <thead>
           　　<tr>
             	<th>image</th>
@@ -9,19 +9,21 @@
         </thead>
         <tbody>
         <% @users.each do |user| %>
-         　　　<tr>
-		      　<td><%= attachment_image_tag user, :profile_image, :fill, 60, 60, class: "user_image", fallback: "no_image.jpg" %></td>
-		      　<td><%= user.username %></td>
-		      　<td><%= link_to 'show' , user_path(user.id), class: "btn-sm btn-primary" %></td>
+         　　 <tr>
+      	      　<td><%= attachment_image_tag user, :profile_image, :fill, 60, 60, class: "img-circle pull-left profile-img", format: 'jpeg', fallback: "no_image.png"  %></td>
 
-		      <% if current_user && current_user.admin? %>
-		        	<td><%= link_to "編集", edit_user_path(user.id), class:　"btn-sm btn-success" %></td>
-		      <% end %>
+      	      　<td><%= user.username %></td>
 
-		      <% if current_user && current_user.admin? %>
-			    	<td><%= link_to "退会", users_path(@user.id), method: :delete, class:　"btn-sm btn-danger", "data-confirm" => "本当に消しますか？" %></td>
+      	      　<td><%= link_to 'show' , user_path(user.id), class: "btn-sm btn-primary" %></td>
 
-               <% end %>
+      	      <% if current_user && current_user.admin? %>
+      	        	<td><%= link_to "編集", edit_user_path(user.id) %></td>
+      	      <% end %>
+
+      	      <% if current_user && current_user.admin? %>
+      		    	  <td><%= link_to "退会", user_path(@users, :user => {:deleted => 'true'}), method: :delete, "data-confirm" => "本当に消しますか？" %></td>
+
+              <% end %>
             </tr>
         <% end %>
         </tbody>

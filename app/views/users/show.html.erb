@@ -1,6 +1,6 @@
 <main>
 	<div class="col-xs-3">
-		<h5>マイページ</h5>
+		<h1 class="title-moji">My page</h1>
 			<%= attachment_image_tag @user, :profile_image, :fill, 60, 60, class: "img-circle pull-left profile-img", format: 'jpeg', fallback: "no_image.png" %>
 				<table class="table">
         			<tbody>
@@ -18,7 +18,7 @@
 	</div>
 
 	<div class="col-xs-9">
-  		<h4>お気に入り</h4>
+  		<h1 class="title-moji">My favorite</h1>
 			<% @favorite_entries.each do |fav| %>
 				<td><div class="panel panel-default">
     				<div class="panel-body">

@@ -73,23 +73,36 @@ img.profile-img{
             transform: scale(1);
   }
 }
-.fuwauki_btn_red{
+
+.demo1{
   display: inline-block;
-  background-color: #FFF;
-  color: #D5F1D6;
-  width: 160px;
-  padding: 0.8em;
+  padding: 20px 20px;
+  border: solid 2px #fff;
+  border-radius: 3px;
+  background: rgba(0,0,0,0.2);
+  color: #fff;
   text-decoration: none;
-  border-radius: 4px;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-  -webkit-tap-highlight-color: transparent;
-  transition: .2s ease-out;
-  text-align: center;
+  font-weight: bold;
+  font-family: 'Kosugi Maru', sans-serif;
 }
-.fuwauki_btn_red:hover{
-   cursor: pointer;
-   text-decoration: none;
-   transform: translateY(-4px);
-   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 3px 10px 0 rgba(0,0,0,0.12), 0 4px 7px -2px rgba(0,0,0,0.2);
+.demo1:hover{
+  color: #333;
+  background: #fff;
 }
 
+.top-title{
+  font-family: 'Charm', cursive;
+  font-size: 150px;
+  color: #fff;
+}
+
+.title-moji{
+  font-family: 'Fredericka the Great', cursive;
+  color: #fff;
+}
+
+.moji{
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 20px;
+  color: #fff;
+}
