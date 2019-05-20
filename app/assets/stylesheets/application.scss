@@ -128,7 +128,6 @@ ul {
 body {
   background-color: #88CCC4;
   font-family: 'Charm', cursive;
-  /*font-family: 'Kosugi Maru', sans-serif;*/
   color:#2E1B0F;
 }
 
@@ -140,13 +139,34 @@ a{
 
 
 /*ログイン・サインアップ画面*/
-.main {
+.main-sign {
     background-color: #FFFFFF;
     width: 400px;
-    height: 400px;
+    height: 550px;
     margin: 7em auto;
     border-radius: 1.5em;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    position: relative;
+}
+.main-log {
+    background-color: #FFFFFF;
+    width: 400px;
+    height: 385px;
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    position: relative;
+}
+.main-item-sign{
+  position: absolute;
+  top: 65%;
+  left: 35%;
+}
+
+.main-item-log{
+  position: absolute;
+  top: 57%;
+  left: 37%;
 }
 
 .sign {

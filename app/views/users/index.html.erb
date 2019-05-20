@@ -14,14 +14,14 @@
 
       	      　<td><%= user.username %></td>
 
-      	      　<td><%= link_to 'show' , user_path(user.id), class: "btn-sm btn-primary" %></td>
+      	      　<td><%= link_to 'マイページ' , user_path(user.id), class: "btn btn-default btn-sm" %></td>
 
       	      <% if current_user && current_user.admin? %>
-      	        	<td><%= link_to "編集", edit_user_path(user.id) %></td>
+      	        	<td><%= link_to "編集", edit_user_path(user.id), class: "btn btn-default btn-sm" %></td>
       	      <% end %>
 
       	      <% if current_user && current_user.admin? %>
-      		    	  <td><%= link_to "退会", user_path(@users, :user => {:deleted => 'true'}), method: :delete, "data-confirm" => "本当に消しますか？" %></td>
+      		    	  <td><%= link_to "退会", user_path(@users, :user => {:deleted => 'true'}), class: "btn btn-default btn-sm" , method: :delete, "data-confirm" => "本当に消しますか？" %></td>
 
               <% end %>
             </tr>
