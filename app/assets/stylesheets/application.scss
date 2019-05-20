@@ -16,70 +16,10 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 *{
-  
-}
-#vegas{
-  width:100vw;
-  height:100vh;
-}
-.wrapper {
-  height: 100%;
-  overflow-x: hidden;
-  position: relative;
-  background-color: #88CCC4;
-}
-.overlay {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  opacity: 0;
-  transition: opacity .5s;
-}
-.overlay.open {
-  width: 100%;
-  height: 100%;
-  opacity: 1;
+
 }
 
-
-main {
-  height: 100%;
-  min-height: 100vh;
-  padding: 0 50px;
-  background-color: #88CCC4;
-  transition: all .5s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-
-main h1 {
-  text-align: center;
-  font-weight: 500;
-}
-main p {
-  text-align: center;
-}
-
-.top-page{
-  height: 100%;
-  min-height: 100vh;
-  
-  transition: all .5s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  font-weight: 500;
-  text-align: center;
-}
+/*ハンバーガーメニュー*/
 .menu-trigger {
   display: inline-block;
   width: 36px;
@@ -103,7 +43,7 @@ main p {
   left: 0;
   width: 100%;
   height: 4px;
-  background-color: #000;
+  background-color: #2E1B0F;
   /*transition: all .5s;*/
 }
 .menu-trigger.active span {
@@ -126,6 +66,31 @@ main p {
 }
 .menu-trigger.active span:nth-of-type(3) {
   transform: translateY(-12px) rotate(45deg);
+}
+
+.wrapper {
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #88CCC4;
+}
+.overlay {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity .5s;
+}
+.overlay.open {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
 }
 
 nav {
@@ -157,13 +122,24 @@ ul {
 .header-right{
   font-family: 'Charm', cursive;
   color: #fff;
+  font-size: 25px;
 }
-
 
 body {
   background-color: #88CCC4;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Charm', cursive;
+  /*font-family: 'Kosugi Maru', sans-serif;*/
+  color:#2E1B0F;
 }
+
+a{
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #fff;
+    text-decoration: none
+}
+
+
+/*ログイン・サインアップ画面*/
 .main {
     background-color: #FFFFFF;
     width: 400px;
@@ -251,15 +227,87 @@ div.form1 {
     padding-top: 15px;
 }
 
-a {
-    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-    color: #2E1B0F;
-    text-decoration: none
-}
 
 @media (max-width: 600px) {
 .main {
     border-radius: 0px;
 }}
 
-
+/*フッター*/
+.footer #button{
+    width:35px;
+    height:35px;
+    border: #fff 12px solid;
+    border-radius:35px;
+    margin:0 auto;
+    position:relative;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.footer #button:hover{
+    width:35px;
+    height:35px;
+    border: #88CCC4 12px solid;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    position:relative;
+}
+.footer {
+    bottom:0;
+    left:0;
+    position:fixed;
+    width: 100%;
+    height: 2em;
+    overflow:hidden;
+    margin:0 auto;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index:999;
+}
+.footer:hover {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    height: 10em;
+}
+.footer #container{
+  margin-top:5px;
+  width:100%;
+  height:100%;
+  position:relative;
+  top:0;
+  left:0;
+  background: #88CCC4;
+}
+.footer #cont{
+  position:relative;
+  top:-45px;
+  right:190px;
+  width:150px;
+  height:auto;
+  margin:0 auto;
+}
+.footer_center{
+  width:500px;
+  float:left;
+  text-align:center;
+}
+.footer h3{
+  font-family: 'Charm', cursive;
+  font-size: 30px;
+  font-weight: 100;
+  margin-top:70px;
+  margin-left:40px;
+  color: #2E1B0F;
+}

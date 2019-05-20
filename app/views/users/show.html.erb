@@ -22,7 +22,7 @@
 			<% @favorite_entries.each do |fav| %>
 				<td><div class="panel panel-default">
     				<div class="panel-body">
-      					<%= link_to fav.title %> - <i> published <%= time_ago_in_words(fav.published) %> ago.</i>
+      					<%= link_to fav.title, fav,class: "panel-body" %> - <i> published <%= time_ago_in_words(fav.published) %> ago.</i>
     						<div id="likes_buttons_<%= fav.id %>">
     							<%= render partial: 'favorites/favorite', locals: { blog_entry: fav, favorites: fav.favorites} %>
     						</div>

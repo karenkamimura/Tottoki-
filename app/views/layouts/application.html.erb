@@ -43,6 +43,7 @@
                 <li class="header-right">
                     <%= link_to "all user", users_path %>
                 </li>
+                <br>
                 <li class="header-right">
                     <%= link_to "log out", destroy_user_session_path, method: :delete %>
                 </li>
@@ -52,9 +53,11 @@
                 <li class="header-right">
                     <%= link_to "about", about_path %>
                 </li>
+                <br>
                 <li class="header-right">
                     <%= link_to 'my page', user_path(current_user.id) %>
                 </li>
+                <br>
                 <li class="header-right">
                     <%= link_to "log out", destroy_user_session_path, method: :delete %>
                 </li>
@@ -64,9 +67,11 @@
                 <li class="header-right">
                     <%= link_to "about", about_path %>
                 </li>
+                <br>
                 <li class="header-right">
                     <%= link_to "sign up", new_user_registration_path %>
                 </li>
+                <br>
                 <li class="header-right">
                     <%= link_to "log in", new_user_session_path %>
                 </li>
@@ -77,5 +82,15 @@
         <div class="overlay"></div>
     </div>
     <%= yield %>
+    <div class="footer">
+  <div id="button"></div>
+<div id="container">
+<div id="cont">
+<div class="footer_center">
+       <h3>kamimu---</h3>
+</div>
+</div>
+</div>
+</div>
   </body>
 </html>

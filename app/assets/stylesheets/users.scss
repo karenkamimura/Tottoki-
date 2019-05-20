@@ -2,6 +2,87 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+main {
+  height: 100%;
+  min-height: 100vh;
+  padding: 0 50px;
+  background-color: #88CCC4;
+  transition: all .5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main h1 {
+  text-align: center;
+  font-weight: 500;
+}
+main p {
+  text-align: center;
+}
+/*トップページ*/
+#vegas{
+  width:100vw;
+  height:100vh;
+}
+
+.top-page{
+  height: 100%;
+  min-height: 100vh;
+  transition: all .5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+}
+
+.top-item{
+  position: absolute;
+  bottom: 30px;
+  margin-left : 10%;
+  margin-right : 10%;
+}
+
+/*トップページの文字*/
+.top-title{
+  font-family: 'Charm', cursive;
+  font-size: 150px;
+  color: #fff;
+}
+.moji{
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 20px;
+  color: #fff;
+}
+
+/*トップページのボタン*/
+.demo1{
+  display: inline-block;
+  padding: 20px 20px;
+  border: solid 2px #fff;
+  border-radius: 3px;
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+.demo1:hover{
+  color: #fff;
+  background: rgba(0,0,0,0.7);
+}
+
+
+
+/*マイページの文字・レイアウト*/
+.title-moji{
+  font-family: 'Charm', cursive;
+  color: #fff;
+}
+
 .col-xs-3 {
     width: 25%;
 }
@@ -24,25 +105,34 @@ img.profile-img{
   margin-left: 10px;
 }
 
+.panel-body{
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #2E1B0F;
+    text-decoration: none
+}
+
+
+/*マイページボタン*/
 .simple_square_btn3 {
-	display: block;
-	position: relative;
-	width: 160px;
-	padding: 0.8em;
-	text-align: center;
-	text-decoration: none;
-	color: #1B1B1B;
-	background: #fff;
+  display: block;
+  position: relative;
+  width: 160px;
+  padding: 0.8em;
+  text-align: center;
+  text-decoration: none;
+  color: #1B1B1B;
+  background: #fff;
     border-radius: 30px;
-	border:1px solid #1B1B1B;
+  border:1px solid #1B1B1B;
 }
 .simple_square_btn3:hover {
-	 cursor: pointer;
-	 text-decoration: none;
-	 -webkit-animation: simple_square_btn3 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-     -moz-animation: simple_square_btn3 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	 animation: simple_square_btn3 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+   cursor: pointer;
+   text-decoration: none;
+   -webkit-animation: simple_square_btn3 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+   -moz-animation: simple_square_btn3 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+   animation: simple_square_btn3 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
 @-webkit-keyframes simple_square_btn3 {
   0% {
     -webkit-transform: scale(0.85);
@@ -72,37 +162,4 @@ img.profile-img{
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-}
-
-.demo1{
-  display: inline-block;
-  padding: 20px 20px;
-  border: solid 2px #fff;
-  border-radius: 3px;
-  background: rgba(0,0,0,0.2);
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: 'Kosugi Maru', sans-serif;
-}
-.demo1:hover{
-  color: #333;
-  background: #fff;
-}
-
-.top-title{
-  font-family: 'Charm', cursive;
-  font-size: 150px;
-  color: #fff;
-}
-
-.title-moji{
-  font-family: 'Fredericka the Great', cursive;
-  color: #fff;
-}
-
-.moji{
-  font-family: 'Kosugi Maru', sans-serif;
-  font-size: 20px;
-  color: #fff;
 }
