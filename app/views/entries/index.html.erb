@@ -13,12 +13,11 @@
         </div>
       </td>
       <% end %>
-
-    <%= paginate @entries, class:"hogehoge" %>
+    <h2><%= paginate @entries, class:"hogehoge" %></h2>
   </div>
 <!-- いいねランキング -->
   <div class="col-xs-4">
-    <h3 class="entry-item">いいねランキング</h3>
+    <h3 class="entry-item">今週のいいねランキング</h3>
      <% @rank.each.with_index(1) do |rank, i| %>
       <td><div class="panel panel-default">
             <div class="panel-body">

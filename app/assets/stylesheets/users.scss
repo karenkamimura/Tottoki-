@@ -21,11 +21,6 @@ main p {
   text-align: center;
 }
 /*トップページ*/
-#vegas{
-  width:100vw;
-  height:100vh;
-}
-
 .top-page{
   height: 100%;
   min-height: 100vh;
@@ -38,19 +33,22 @@ main p {
   text-align: center;
   position: relative;
 }
-
+#vegas{
+  width:100vw;
+  height:100vh;
+  position: relative;
+}
 .top-item{
   position: absolute;
-  bottom: 30px;
-  margin-left : 10%;
-  margin-right : 10%;
+  top: 15%;
+  left: 38%;
 }
-
 /*トップページの文字*/
 .top-title{
   font-family: 'Charm', cursive;
   font-size: 150px;
   color: #fff;
+  text-align: center;
 }
 .moji{
   font-family: 'Kosugi Maru', sans-serif;
@@ -58,7 +56,38 @@ main p {
   color: #fff;
 }
 
-/*トップページのボタン*/
+/*アバウトページ*/
+.about{
+  width:100vw;
+  height:100vh;
+  position: relative;
+}
+.top-item-about{
+  position: absolute;
+  top: 15%;
+  left: 25%;
+}
+/*アバウトページの文字*/
+.top-title-about{
+  font-family: 'Charm', cursive;
+  font-size: 100px;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+.moji-about{
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 25px;
+  color: #fff;
+}
+
+.komoji-about{
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 17px;
+  color: #fff;
+}
+
+/*トップページ・アバウトページのボタン*/
 .demo1{
   display: inline-block;
   padding: 20px 20px;
