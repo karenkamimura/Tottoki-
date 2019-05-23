@@ -1,26 +1,20 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+サイト名　Tottoki!
+制作者　上村花恋
+種別　美容系キュレーションサイト
+開発環境　Rails 5.2.3
+本番環境
+バージョン 1.0
+最終更新日
 
 
+概要
+美容系のキュレーションサイトです。
+美容系の記事をまとめています。
+一週間でいいねされたランキングと、自分がいいねした記事はマイページでも閲覧可能になります。
+
+
+使い方
+1.トップページの、のぞいてみるボタンでメインページ（記事一覧）に遷移します
+2.好きな記事を選べば閲覧できます
+3.いいね機能はログイン後にできるため、ヘッダーからログインをえらんでいただければログインページに遷移できます
+4.またログイン前にいいねボタンを押すといいねボタンからもログイン画面に遷移できます

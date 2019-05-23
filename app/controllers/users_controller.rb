@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!,except: [:about, :top]
-  
+  before_action :authenticate_user!, except: [:about, :top]
+
   def top
   end
 
@@ -30,9 +30,10 @@ class UsersController < ApplicationController
 
   def destroy
     @user = current_user
-    @users = User.find(params[:format])
+    @users = User.find(params[:id])
+    
+    if current_user.id == @users.id || current_user.admin == true
     @users.destroy
-    if current_user.id == @user.id || current_user.admin == true
     end
     redirect_to root_path
   end

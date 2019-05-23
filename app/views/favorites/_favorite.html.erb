@@ -10,6 +10,7 @@
         </span>
       </div>
     <% end %>
+
   <% else %>
 
     <%= link_to blog_entry_favorites_path(entry_id: blog_entry.id ,blog_id: blog_entry.blog_id), method: :post, remote: true do %>
@@ -24,21 +25,32 @@
 
 <% else %>
 
+
+
   <% if blog_entry.favorites.count > 0 %>
-    <div class="vertical_like">
-      <i class="material-icons red-text">favorite</i>
-      <span class="red-text">
+    <div class="vertical_like hoge">
+      <i class="material-icons grey-text text-darken-2">
+        <%= link_to new_user_session_path,class: "guest-heart" do %>
+        favorite_border
+        <% end %>
+      </i>
+      <span class="grey-text text-darken-2">
         <%= blog_entry.favorites.count %>
       </span>
     </div>
 
   <% else %>
     <div class="vertical_like hoge">
-      <i class="material-icons grey-text text-darken-2">favorite_border</i>
+      <i class="material-icons grey-text text-darken-2">
+        <%= link_to new_user_session_path,class: "guest-heart" do %>
+        favorite_border
+        <% end %>
+      </i>
       <span class="grey-text text-darken-2">
         <%= blog_entry.favorites.count %>
       </span>
     </div>
   <% end %>
+
 
 <% end %>

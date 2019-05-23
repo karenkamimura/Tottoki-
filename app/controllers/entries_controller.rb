@@ -1,5 +1,4 @@
 class EntriesController < ApplicationController
-
   def index
     @entries = Entry.page(params[:page]).reverse_order
     from  = Time.now.at_beginning_of_day
