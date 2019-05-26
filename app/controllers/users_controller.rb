@@ -31,7 +31,6 @@ class UsersController < ApplicationController
   def destroy
     @user = current_user
     @users = User.find(params[:id])
-    
     if current_user.id == @users.id || current_user.admin == true
     @users.destroy
     end

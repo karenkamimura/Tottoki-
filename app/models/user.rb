@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :favorites, foreign_key: :user_id, dependent: :destroy
-  has_many :entries
+  has_many :entries, through: :favorites
   attachment :profile_image
 end
