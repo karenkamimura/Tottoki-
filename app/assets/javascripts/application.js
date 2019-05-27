@@ -20,7 +20,7 @@
 $(function(){
 $('.menu-trigger').on('click',function(){
 	if($(this).hasClass('active')){
-	  $(this).removeClass('active');
+	  $(this).removeClass('activestorageve');
 	  $('nav').removeClass('open');
 	  $('.overlay').removeClass('open');
 	} else {
