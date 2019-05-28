@@ -9,10 +9,13 @@
 							<th><%= @user.username %></th>
 						</tr>
 						<tr>
-							<th><%= link_to "編集", edit_user_path(current_user.id), class: "simple_square_btn3" %></th>
+							<th><%= link_to "新着記事一覧ページ", entries_path(current_user.id), class: "simple_square_btn3" %></th>
 						</tr>
 						<tr>
-							<th><%= link_to "退会", user_path(@user.id, :user => {:deleted => 'true'}), method: :delete, class: "simple_square_btn3", "data-confirm" => "本当に退会しますか？" %></th>
+							<th><%= link_to "ユーザー情報の編集", edit_user_path(current_user.id), class: "simple_square_btn3" %></th>
+						</tr>
+						<tr>
+							<th><%= link_to "退会する", user_path(@user.id, :user => {:deleted => 'true'}), method: :delete, class: "simple_square_btn3", "data-confirm" => "本当に退会しますか？" %></th>
 						</tr>
 					</tbody>
 				</table>
