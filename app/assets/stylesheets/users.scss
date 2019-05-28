@@ -107,6 +107,12 @@ main p {
 
 
 /*マイページの文字・レイアウト*/
+.username{
+  font-family: 'Charm', cursive;
+  color: #2E1B0F;
+  text-align: center;
+  font-size: 20px;
+}
 .title-moji{
   font-family: 'Charm', cursive;
   color: #fff;
@@ -119,19 +125,22 @@ main p {
 .col-xs-9 {
     width: 75%;
 }
+
 .circle img {
   border-radius: 30px;
 }
+
 img.profile-img{
-  float: right;
+  float: none;
   margin-top: 30px;
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
+  padding: 5px;
 }
 .pull-left {
   float: none;
   left: -100%;
-  margin-left: 10px;
+  margin-left: 73px;
 }
 
 .panel-body{
@@ -153,6 +162,7 @@ img.profile-img{
   background: #fff;
   border-radius: 30px;
   border:1px solid #fff;
+  margin: auto;
 }
 .simple_square_btn3:hover {
    cursor: pointer;

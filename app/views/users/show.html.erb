@@ -2,11 +2,13 @@
 <main>
 	<div class="col-xs-3">
 		<h1 class="title-moji">My page</h1>
+
 			<%= attachment_image_tag @user, :profile_image, :fill, 60, 60, class: "img-circle pull-left profile-img", format: 'jpeg', fallback: "oshibana.jpg" %>
+
 				<table class="table">
         			<tbody>
           				<tr>
-							<th><%= @user.username %></th>
+							<th class="username"><%= @user.username %></th>
 						</tr>
 						<tr>
 							<th><%= link_to "新着記事一覧ページ", entries_path(current_user.id), class: "simple_square_btn3" %></th>
