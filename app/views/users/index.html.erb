@@ -2,19 +2,18 @@
     <table class="table table-hover table-inverse">
         <thead>
           　　<tr>
-            	<th>image</th>
-            	<th>name</th>
-            	<th></th>
+            	<th><h2>image</h2></th>
+            	<th><h2>name</h2></th>
           　　</tr>
         </thead>
         <tbody>
         <% @users.each do |user| %>
          　　 <tr>
-      	      　<td><%= attachment_image_tag user, :profile_image, :fill, 60, 60, class: "img-circle pull-left profile-img", format: 'jpeg', fallback: "oshibana.jpg"  %></td>
+      	      　<td><h4><%= attachment_image_tag user, :profile_image, :fill, 60, 60, class: "img-circle pull-left profile-img", format: 'jpeg', fallback: "oshibana.jpg"  %></h4></td>
 
-      	      　<td><%= user.username %></td>
+      	      　<td><h4><%= user.username %></h4></td>
 
-      	      　<td><%= link_to 'マイページ' , user_path(user.id), class: "btn btn-default btn-sm" %></td>
+      	      　<td><h4><%= link_to 'マイページ' , user_path(user.id), class: "btn btn-default btn-sm" %></h4></td>
 
       	      <% if current_user && current_user.admin? %>
       	        	<td><%= link_to "編集", edit_user_path(user.id), class: "btn btn-default btn-sm" %></td>
