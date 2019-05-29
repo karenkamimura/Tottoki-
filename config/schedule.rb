@@ -6,14 +6,14 @@ require File.expand_path(File.dirname(__FILE__) + "/environment")
 # rails.rootを使用するときに必要。wheneverはrailsを起動しなくてはならないため
 
 
-rails_env = ENV['RAILS_ENV'] || :development
+rails_env = ENV['RAILS_ENV'] || :production
 # cronを実行する環境変数・developmentをAWSではproductionに書き換える
 
 
 set :environment, rails_env
 # 環境変数セット
 
-env :PATH, ENV['PATH']
+# env :PATH, ENV['PATH']
 # パス
 
 
