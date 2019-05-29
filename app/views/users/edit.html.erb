@@ -9,22 +9,22 @@
             	<% end %>
           </ul>
         </div>
-    <% end %>
+  <% end %>
 
     <div class="form1">
 
     <%= form_for(@user) do |f| %>
 
-	    <%= f.attachment_field :profile_image, class: "un",placeholder:"Username" %>
+	        <%= f.attachment_field :profile_image, class: "un",placeholder:"Username" %>
 
-	    <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "un",placeholder:"Username" %>
+	        <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "un",placeholder:"Username" %>
 
           <%= f.text_field :email, autofocus: true, autocomplete: "email", class: "un",placeholder:"Email" %>
 
           <%= f.text_field :phone_number, autofocus: true, autocomplete: "phone_number", class: "un",placeholder:"phone_number" %>
 
-		  <%= f.submit "編集", class: "submit" %>
-		  <% end %>
+		      <%= f.submit "編集", class: "submit" %>
+	  <% end %>
 
-	</div>
+	  </div>
 </div>

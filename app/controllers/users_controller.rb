@@ -31,10 +31,13 @@ class UsersController < ApplicationController
   def destroy
     @user = current_user
     @users = User.find(params[:id])
-    if current_user.id == @users.id || current_user.admin == true
     @users.destroy
+    if current_user.admin == true
+
+      redirect_to users_path
+    else
+      redirect_to root_path
     end
-    redirect_to root_path
   end
 
   private
