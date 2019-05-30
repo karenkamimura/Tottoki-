@@ -12,7 +12,7 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
+
 //= require_tree .
 
 //= require bootstrap-sprockets
@@ -23,6 +23,7 @@ $('.menu-trigger').on('click',function(){
 	  $(this).removeClass('activestorageve');
 	  $('nav').removeClass('open');
 	  $('.overlay').removeClass('open');
+	  $(this).removeClass('active');
 	} else {
 	  $(this).addClass('active');
 	  $('nav').addClass('open');
