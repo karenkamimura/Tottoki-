@@ -70,4 +70,4 @@ gem 'jquery-rails'
 gem 'feedjira'
 gem 'pry-rails'
 gem 'whenever', :require => false
-gem 'kaminari', '~> 1.1.1'
+gem 'kaminari', '~> 1.2.1'
